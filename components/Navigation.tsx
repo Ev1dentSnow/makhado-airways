@@ -12,9 +12,9 @@ import {
 
 export default function Navigation() {
 	return(
-		<NavigationMenu>
-			<NavigationMenuList>
-				<NavigationMenuItem>
+		<NavigationMenu className="bg-white">
+			<NavigationMenuList className="bg-white">
+				<NavigationMenuItem className="bg-white">
 					<Link href="getting-started" legacyBehavior passHref>
 						<NavigationMenuLink className={navigationMenuTriggerStyle()}>
                             Getting Started
