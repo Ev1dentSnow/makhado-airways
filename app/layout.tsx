@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import ModeToggle from "@/components/ModeToggle";
+import backgroundImage from "../public/MakhadoBackground.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,12 +27,14 @@ export default function RootLayout({
 					enableSystem
 					disableTransitionOnChange
 				>
-					<div className="flex gap-2 float-right mr-20">
-						<Navigation />
-						<ModeToggle />
+					<div className="h-screen" style={{ backgroundImage: `url(${backgroundImage.src})`}}>
+						<div className="flex gap-2 float-right mr-20 mt-6">
+							<Navigation />
+							<ModeToggle />
+						</div>
 					</div>
 
-					{children}
+					{children} 
 				</ThemeProvider>
 			</body>
 		</html>
