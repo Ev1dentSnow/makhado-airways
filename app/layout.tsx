@@ -31,10 +31,8 @@ export default function RootLayout({
 						<ModeToggle />
 					</div>
 
-					<div>{children}</div>
+					{children}
 
-					<div></div>
-					
 					{/* ACTUAL COMPONENTS END HERE*/}
 				</ThemeProvider>
 			</body>

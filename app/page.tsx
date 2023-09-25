@@ -5,7 +5,7 @@ import Header from "@/components/home/Header";
 export default function Home() {
 	return (
 		<>
-			<div className="clear-both h-screen flex flex-col gap-20">
+			<div className="parallax-wrapper clear-both h-screen">
 				<Header />
 				<AirlineStats />
 			</div>
