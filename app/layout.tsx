@@ -26,11 +26,7 @@ export default function RootLayout({
 					disableTransitionOnChange
 				>
 					{/* ACTUAL COMPONENTS START HERE*/}
-					<div className="flex gap-2 float-right mr-20 mt-6 mb-6 bg-white">
-						<Navigation />
-						<ModeToggle />
-					</div>
-
+					<Navigation />
 					{children}
 
 					{/* ACTUAL COMPONENTS END HERE*/}
