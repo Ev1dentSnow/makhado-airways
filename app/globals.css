@@ -42,6 +42,14 @@ body {
   transform: translateZ(-10px) scale(2);
 }
 
+.navbar {
+  @apply fixed w-screen z-50 bg-transparent flex p-12
+}
+
+.navbar-scrolled {
+  @apply fixed w-screen z-50 bg-background flex p-12
+}
+
  
 @layer base {
   :root {
