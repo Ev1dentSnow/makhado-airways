@@ -43,12 +43,12 @@ body {
 }
 
 .navbar {
-  @apply fixed w-screen z-50 bg-transparent flex p-12
+  @apply fixed w-screen z-50 bg-transparent flex p-12 transition-all duration-500
 }
 
 .navbar-scrolled {
-  @apply fixed w-screen z-50 bg-background flex p-12
-}
+  @apply fixed w-screen z-50 bg-background flex pl-12 pt-4 pr-12 pb-4 transition-all duration-700
+ }
 
  
 @layer base {
