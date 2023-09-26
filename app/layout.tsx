@@ -3,7 +3,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import ModeToggle from "@/components/ModeToggle";
 import { NavbarScrolledContextProvider } from "@/contexts/NavbarScrolledContext";
 
 const inter = Inter({ subsets: ["latin"] });
