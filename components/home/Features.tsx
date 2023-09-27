@@ -15,6 +15,7 @@ export default function Features() {
                     <p className="text-muted-foreground">
                         The cutting edge platform incomparable to anything else currently available
                     </p>
+                    <span className="w-24 h-0.5 bg-foreground rounded-sm"></span>
                     <div className="flex gap-4">
                         <div>
                             <CheckCircle width={20} color="#00C851"/>
@@ -40,6 +41,7 @@ export default function Features() {
                     <p className="text-muted-foreground">
                         Your bank account belongs to YOU
                     </p>
+                    <span className="w-24 h-0.5 bg-foreground rounded-sm"></span>
                     <div className="flex gap-4">
                         <div>
                             <CheckCircle width={20} color="#00C851"/>
@@ -65,6 +67,7 @@ export default function Features() {
                     <p className="text-muted-foreground">
                         Realism-centric dispatch environment
                     </p>
+                    <span className="w-24 h-0.5 bg-foreground rounded-sm"></span>
                     <div className="flex gap-4">
                         <div>
                             <CheckCircle size={20} color="#00C851"/>
@@ -90,6 +93,7 @@ export default function Features() {
                     <p className="text-muted-foreground">
                         Hour based seniority system (not just for bragging rights)
                     </p>
+                    <span className="w-24 h-0.5 bg-foreground rounded-sm"></span>
                     <div className="flex gap-4">
                         <div>
                             <CheckCircle size={20} color="#00C851"/>
