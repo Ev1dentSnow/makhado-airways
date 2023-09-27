@@ -25,7 +25,7 @@ export default function Home() {
 			{/*// @ts-ignore */}
 			<div ref={parallaxWrapperRef} className="parallax-wrapper clear-both h-screen">
 				<Header />
-				<section className="flex justify-between gap-8 bg-background pt-20 pl-24">
+				<section className="flex justify-between gap-8 bg-muted pt-20 pl-24">
 					<div className="airline-about flex flex-col gap-16 max-w-1/2">
 						<div className="flex flex-col gap-y-6">
 							<h2 className="text-4xl">Who are we?</h2>

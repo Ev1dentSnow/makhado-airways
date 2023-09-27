@@ -17,8 +17,8 @@ export default function AirlineStats() {
 
 	return (
 		<>
-			<section className="grid grid-rows-3 gap-12 bg-background mr-6 pr-48">
-				<Card>
+			<section className="grid grid-rows-3 gap-12 bg-muted mr-6 pr-48 pb-16">
+				<Card className="shadow-md border-t-2 border-r-0 border-b-0 border-l-0 border-primary">
 					<CardHeader className="items-center">
 						<User size={44} color={setIconColor(theme)}/>
 					</CardHeader>
@@ -28,7 +28,7 @@ export default function AirlineStats() {
 					</CardContent>
 				</Card>
 
-				<Card>
+				<Card className="shadow-md border-t-2 border-r-0 border-b-0 border-l-0 border-primary">
 					<CardHeader className="items-center">
 						<Map size={44} color={setIconColor(theme)}/>
 					</CardHeader>
@@ -38,7 +38,7 @@ export default function AirlineStats() {
 					</CardContent>
 				</Card>
 
-				<Card>
+				<Card className="shadow-md border-t-2 border-r-0 border-b-0 border-l-0 border-primary">
 					<CardHeader className="items-center">
 						<PlaneTakeoff size={44} color={setIconColor(theme)} />
 					</CardHeader>
@@ -47,6 +47,7 @@ export default function AirlineStats() {
 						<h5 className="text-xl text-muted-foreground">Successful sectors flown</h5>
 					</CardContent>
 				</Card>
+
 			</section>
 		</>
 	);
