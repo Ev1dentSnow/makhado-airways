@@ -9,8 +9,10 @@ export default function Features() {
                 <p className="text-lg">Here, we dont have competition. We operate on a completly different wavelength from the competition, thus we are not the same</p>
             </div>
             <div className="grid grid-rows-2 grid-cols-2 gap-8">
-                <div className="flex flex-col gap-6 p-4 rounded-md hover:bg-accent transition-all duration-300">
-                    <Laptop size={40} color="rgb(0, 102, 168)" />
+                <div className="flex flex-col gap-6 p-4 rounded-md shadow-2xl hover:bg-accent transition-all duration-300">
+                    <div className="w-fit rounded-md p-2 bg-[rgba(130,179,228,1)] border-white">
+                        <Laptop size={40} color="background" />
+                    </div>
                     <h4 className="text-2xl">FTW VA Platform</h4>
                     <p className="text-muted-foreground">
                         The cutting edge platform incomparable to anything else currently available
@@ -35,8 +37,10 @@ export default function Features() {
                         <p className="text-muted-foreground">Seasonal variations on passenger and cargo demand per destination</p>
                     </div>
                 </div>
-                <div className="flex flex-col gap-6 p-4 rounded-md hover:bg-accent transition-all duration-300">
-                    <Landmark size={40} color="rgb(0, 102, 168)" />
+                <div className="flex flex-col gap-6 p-4 rounded-md shadow-2xl hover:bg-accent transition-all duration-300">
+                    <div className="w-fit rounded-md p-2 bg-[rgba(130,179,228,1)] border-white">
+                        <Landmark size={40} color="background" />
+                    </div>
                     <h4 className="text-2xl">Finances</h4>
                     <p className="text-muted-foreground">
                         Your bank account belongs to YOU
@@ -61,8 +65,10 @@ export default function Features() {
                         <p className="text-muted-foreground">Invest in FBOs, private aircraft, or other assets</p>
                     </div>
                 </div>
-                <div className="flex flex-col gap-6 p-4 rounded-md hover:bg-accent transition-all duration-300">
-                    <RadioTower size={40} color="rgb(0, 102, 168)" />
+                <div className="flex flex-col gap-6 p-4 rounded-md shadow-2xl hover:bg-accent transition-all duration-300">
+                    <div className="w-fit rounded-md p-2 bg-[rgba(130,179,228,1)] border-white">
+                        <RadioTower size={40} color="background" />
+                    </div>
                     <h4 className="text-2xl">Dispatch</h4>
                     <p className="text-muted-foreground">
                         Realism-centric dispatch environment
@@ -87,8 +93,10 @@ export default function Features() {
                         <p className="text-muted-foreground">Integrated dispatch environment (coming soon)</p>
                     </div>
                 </div>
-                <div className="flex flex-col gap-6 p-4 rounded-md hover:bg-accent transition-all duration-300">
-                    <Award size={40} color="rgb(0, 102, 168)" />
+                <div className="flex flex-col gap-6 p-4 rounded-md shadow-2xl hover:bg-accent hover:border-4 transition-all duration-300">
+                    <div className="w-fit rounded-md p-2 bg-[rgba(130,179,228,1)] border-white">
+                        <Award size={40} color="background" />
+                    </div>
                     <h4 className="text-2xl">Seniority System</h4>
                     <p className="text-muted-foreground">
                         Hour based seniority system (not just for bragging rights)
