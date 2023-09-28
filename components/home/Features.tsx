@@ -1,7 +1,21 @@
 
 import { Award, Landmark, Laptop, RadioTower, CheckCircle, Construction } from "lucide-react"
+import { useTheme } from "next-themes"
 
 export default function Features() {
+
+    const { theme } = useTheme();
+
+    const setFeatureIconColor = () => {
+        if (theme === "dark") {
+            return "hsl(222.2 84% 4.9%)"
+        }
+        else {
+            // dark background color
+            return "white"
+        }
+    }
+
     return (
         <section className="flex gap-48 pl-24 pr-24 pt-12">
             <div className="flex flex-col justify-center items-center gap-8 min-w-1/3">
@@ -11,7 +25,7 @@ export default function Features() {
             <div className="grid grid-rows-2 grid-cols-2 gap-8">
                 <div className="flex flex-col gap-6 p-4 rounded-md shadow-2xl hover:bg-accent transition-all duration-300">
                     <div className="w-fit rounded-md p-2 bg-[rgba(130,179,228,1)] border-white">
-                        <Laptop size={40} color="background" />
+                        <Laptop size={40} color={setFeatureIconColor()} />
                     </div>
                     <h4 className="text-2xl">FTW VA Platform</h4>
                     <p className="text-muted-foreground">
@@ -39,7 +53,7 @@ export default function Features() {
                 </div>
                 <div className="flex flex-col gap-6 p-4 rounded-md shadow-2xl hover:bg-accent transition-all duration-300">
                     <div className="w-fit rounded-md p-2 bg-[rgba(130,179,228,1)] border-white">
-                        <Landmark size={40} color="background" />
+                        <Landmark size={40} color={setFeatureIconColor()} />
                     </div>
                     <h4 className="text-2xl">Finances</h4>
                     <p className="text-muted-foreground">
@@ -67,7 +81,7 @@ export default function Features() {
                 </div>
                 <div className="flex flex-col gap-6 p-4 rounded-md shadow-2xl hover:bg-accent transition-all duration-300">
                     <div className="w-fit rounded-md p-2 bg-[rgba(130,179,228,1)] border-white">
-                        <RadioTower size={40} color="background" />
+                        <RadioTower size={40} color={setFeatureIconColor()} />
                     </div>
                     <h4 className="text-2xl">Dispatch</h4>
                     <p className="text-muted-foreground">
@@ -95,7 +109,7 @@ export default function Features() {
                 </div>
                 <div className="flex flex-col gap-6 p-4 rounded-md shadow-2xl hover:bg-accent hover:border-4 transition-all duration-300">
                     <div className="w-fit rounded-md p-2 bg-[rgba(130,179,228,1)] border-white">
-                        <Award size={40} color="background" />
+                        <Award size={40} color={setFeatureIconColor()} />
                     </div>
                     <h4 className="text-2xl">Seniority System</h4>
                     <p className="text-muted-foreground">

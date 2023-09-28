@@ -1,5 +1,7 @@
+import Instructions from "@/components/getting-started/Instructions";
+
 export default function GettingStarted() {
 	return (
-		<h1>Work in Progress</h1>
+		<Instructions />
 	);
 }
