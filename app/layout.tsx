@@ -10,6 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
 	title: "Makhado Airways",
 	description: "South Africa's Busiest Virtual AIrline",
+	themeColor: "hsl(210, 64, 70)"
 };
 
 export default function RootLayout({

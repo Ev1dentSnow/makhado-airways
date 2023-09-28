@@ -8,8 +8,8 @@ export default function Instructions() {
     return (
         <section className="w-screen h-fit flex flex-col gap-16 pt-24 pb-32">
             <div className="flex flex-col items-center gap-8 pb-6">
-                <h1 className="text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[rgba(0,102,168,1)] via-[rgba(77,106,136,1)] to-[rgba(130,179,228,1)]">Makhado Airways Virtual Airline Onboarding</h1>
-                <p className="text-xl text-muted-foreground">
+                <h1 className="text-6xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[rgba(0,102,168,1)] via-[rgba(77,106,136,1)] to-[rgba(130,179,228,1)]">Makhado Airways Virtual Airline Onboarding</h1>
+                <p className="text-2xl text-muted-foreground">
                     We are currently accepting applications and can&apos;t wait to meet you!
                     To get started, there are 3 simple steps
                 </p>
@@ -19,11 +19,11 @@ export default function Instructions() {
                 <p className="text-muted-foreground">
                     Join our Discord server and take some time to introduce yourself.<br/><br/>
                     We're hyped to get to know you and find out if you're a good fit for our
-                    virtual airline.<br/><br/>Here we can also renderassistance with the onboarding
+                    virtual airline.<br/><br/>Here we can also render assistance with the onboarding
                     process if you require any
                 </p>
                 <Button asChild className="h-14 w-96 bg-[#5865F2]" variant="outline">
-                    <Link href="https://discord.gg/2XsyUuE9tr" target="_blank" className="text-lg font-semibold">
+                    <Link href="https://discord.gg/2XsyUuE9tr" target="_blank" className="text-xl">
                     <BsDiscord size={24} className="mr-2" />
                         Join our Discord server
                     <BiLinkExternal size={24} className="ml-2" />
@@ -41,7 +41,7 @@ export default function Instructions() {
                 </p>
 
                     <Button asChild className="h-14 w-96 bg-primary" variant="outline">
-                    <Link href="https://www.ftw-sim.de/" target="_blank" className="text-lg font-semibold">
+                    <Link href="https://www.ftw-sim.de/" target="_blank" className="text-xl">
                         FlyTheWorld VA Platform Website
                     <BiLinkExternal size={24} className="ml-2" />
                     </Link>
