@@ -11,10 +11,16 @@ import { useContext, useEffect, useRef} from "react";
 
 export default function Home() {
 
-
+	// Scroll listener for navbar shrink on home page
 	useEffect(() => parallaxWrapperRef.current?.addEventListener("scroll", () => {
 		//@ts-ignore
 		setScrolled((parallaxWrapperRef.current!.scrollTop > 50));
+	}));
+
+	// Scroll listener for navbar shrink on any other page
+	useEffect(() => window.addEventListener("scroll", () => {
+		//@ts-ignore
+		setScrolled((window.scrollY > 50));
 	}));
 
 	const parallaxWrapperRef = useRef<HTMLDivElement>();
