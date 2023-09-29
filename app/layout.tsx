@@ -21,7 +21,6 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<div className="root">
 					<ThemeProvider
 						attribute="class"
 						defaultTheme="system"
@@ -35,8 +34,6 @@ export default function RootLayout({
 
 						{/* ACTUAL COMPONENTS END HERE*/}
 					</ThemeProvider>
-				</div>
-
 			</body>
 		</html>
 	);
