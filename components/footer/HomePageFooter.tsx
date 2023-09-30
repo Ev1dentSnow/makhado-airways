@@ -1,5 +1,4 @@
 
-
 export default function HomePageFooter() {
     return (
         <div className="flex flex-col gap-6 items-center pt-6">

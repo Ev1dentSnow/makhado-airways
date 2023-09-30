@@ -8,7 +8,7 @@ import Header from "@/components/home/Header";
 import Introduction from "@/components/home/Introduction";
 import { NavbarScrolledContext } from "@/contexts/NavbarScrolledContext";
 import CallToAction from "@/components/home/CallToAction";
-import Footer from "@/components/HomePageFooter";
+import Footer from "@/components/footer/HomePageFooter";
 
 
 
