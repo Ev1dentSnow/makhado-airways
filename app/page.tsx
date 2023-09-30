@@ -7,6 +7,8 @@ import Features from "@/components/home/Features";
 import Header from "@/components/home/Header";
 import Introduction from "@/components/home/Introduction";
 import { NavbarScrolledContext } from "@/contexts/NavbarScrolledContext";
+import CallToAction from "@/components/home/CallToAction";
+import Footer from "@/components/HomePageFooter";
 
 
 
@@ -36,7 +38,7 @@ export default function Home() {
 					<AirlineStats />
 				</section>
 				<Features />
-
+				<CallToAction />
 			</div>
 		</>
 	);
