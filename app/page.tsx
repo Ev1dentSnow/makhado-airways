@@ -8,7 +8,7 @@ import Header from "@/components/home/Header";
 import Introduction from "@/components/home/Introduction";
 import { NavbarScrolledContext } from "@/contexts/NavbarScrolledContext";
 import CallToAction from "@/components/home/CallToAction";
-import Footer from "@/components/footer/HomePageFooter";
+import Footer from "@/components/footer/FooterContent";
 
 
 
@@ -39,6 +39,7 @@ export default function Home() {
 				</section>
 				<Features />
 				<CallToAction />
+				<Footer />
 			</div>
 		</>
 	);

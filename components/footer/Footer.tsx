@@ -1,7 +1,9 @@
+//TODO: REFACTOR PARALLAX TO USE REACT SCROLL PARALLAX! THIS WHOLE FOOTER LOGIC IS EXTREMELY UGLY AND DISCOMBOBULATED!
+
 "use client"
 
 import { usePathname } from "next/navigation"
-import HomePageFooter from "./HomePageFooter";
+import HomePageFooter from "./FooterContent";
 import { useEffect, useState } from "react";
 
 export default function Footer() {
@@ -13,6 +15,6 @@ export default function Footer() {
         setIsHomePage((currentPath === "/"));
     }, [currentPath])
 
-    return isHomePage ? <HomePageFooter /> : <div><p>OTHER PAGES FOOTERS</p></div>
+    return isHomePage ? null : <HomePageFooter />
 
 }
