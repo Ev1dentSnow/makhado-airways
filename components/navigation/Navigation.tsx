@@ -7,7 +7,7 @@ import { NavbarScrolledContext } from "@/contexts/NavbarScrolledContext";
 
 export default function Navigation() {
 
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+	const [windowWidth, setWindowWidth] = useState(0);
 	
 	const { setScrolled } = useContext(NavbarScrolledContext);
 
@@ -40,6 +40,10 @@ export default function Navigation() {
 		else {
 			return <MobileNavbar />;
 		}
+	}
+
+	if (windowWidth === 0) {
+		return null;
 	}
 
 	return setNavbar();
