@@ -6,7 +6,7 @@ import { createContext, useState } from "react";
 
 export const NavbarScrolledContext = createContext({
 	scrolled: false,
-	setScrolled: () => {}
+	setScrolled: (scrolled: Boolean) => {}
 });
 
 //@ts-ignore

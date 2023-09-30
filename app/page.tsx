@@ -1,31 +1,30 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client";
 
+import { useRef, useEffect, useContext } from "react";
 import AirlineStats from "@/components/AirlineStats";
 import Features from "@/components/home/Features";
 import Header from "@/components/home/Header";
 import Introduction from "@/components/home/Introduction";
 import { NavbarScrolledContext } from "@/contexts/NavbarScrolledContext";
-import { useContext, useEffect, useRef} from "react";
+
 
 
 export default function Home() {
 
-	// Scroll listener for navbar shrink on home page
-	useEffect(() => parallaxWrapperRef.current?.addEventListener("scroll", () => {
-		//@ts-ignore
-		setScrolled((parallaxWrapperRef.current!.scrollTop > 50));
-	}));
-
-	// Scroll listener for navbar shrink on any other page
-	useEffect(() => window.addEventListener("scroll", () => {
-		//@ts-ignore
-		setScrolled((window.scrollY > 50));
-	}));
-
 	const parallaxWrapperRef = useRef<HTMLDivElement>();
 
 	const { setScrolled } = useContext(NavbarScrolledContext);
+
+	const updateHomePageScrolled = () => {
+		setScrolled((parallaxWrapperRef.current!.scrollTop > 50));
+	}
+
+	// Scroll listener for navbar shrink on home page
+	useEffect(() => { 
+		parallaxWrapperRef.current?.addEventListener("scroll", updateHomePageScrolled)
+		return () => parallaxWrapperRef?.current?.removeEventListener("scroll", updateHomePageScrolled)
+	}, []);
 
 	return (
 		<> 
