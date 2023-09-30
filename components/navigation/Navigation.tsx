@@ -6,7 +6,7 @@ import MobileNavbar from "./MobileNavbar";
 
 export default function Navigation() {
 
-	const [windowWidth, setWindowWidth] = useState(0);
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
 	const updateWindowWidth = () => {
 		setWindowWidth(window.innerWidth);

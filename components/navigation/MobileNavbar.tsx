@@ -19,7 +19,7 @@ export default function MobileNavbar() {
 
          <Sheet>
             <SheetTrigger>
-                <Button variant="outline">Open</Button>
+            <Button variant="outline">Open</Button>
             </SheetTrigger>
             <SheetContent>
                 <SheetHeader>
