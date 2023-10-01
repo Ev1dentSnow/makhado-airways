@@ -6,7 +6,7 @@ import { Button } from "../ui/button";
 export default function CallToAction() {
     return (
         <section className="flex flex-col items-center justify-center">
-            <div className="h-[60vh] w-screen relative">
+            <div className="h-[60vh] w-full relative">
             <Image 
                 src={CallToActionBackground}
                 alt="Call to action section background"
