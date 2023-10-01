@@ -14,7 +14,7 @@ export default function Introduction() {
                 <h2 className="text-4xl">What do we do?</h2>
                 <p className="text-xl text-muted-foreground">
                     We simulate &apos;as real as it gets&apos; airline operations on the Fly The World VA platform.
-                    If you're familiar with the Sub Saharan region on VATIM you&apos;ve probably heard or seen the MAW | Makhado 
+                    If you're familiar with the Sub Saharan region on VATSIM you&apos;ve probably heard or seen the MAW | Makhado 
                     callsign at some point
                 </p>
             </div>
