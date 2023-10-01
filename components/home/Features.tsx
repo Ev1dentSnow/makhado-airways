@@ -1,10 +1,8 @@
-
 import { Award, Landmark, Laptop, RadioTower, CheckCircle, Construction } from "lucide-react"
-import { useTheme } from "next-themes"
 
 export default function Features() {
 
-    const { theme } = useTheme();
+    const theme = "dark";
 
     const setFeatureIconColor = () => {
         if (theme === "dark") {

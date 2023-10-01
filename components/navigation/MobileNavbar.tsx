@@ -6,15 +6,11 @@ import ModeToggle from "../ModeToggle";
 import NavbarBrandColour from "../../public/NavbarBrandColour.png";
 import NavbarBrandWhite from "../../public/NavbarBrandWhite.png";
 import { useContext } from "react";
-import { NavbarScrolledContext } from "@/contexts/NavbarScrolledContext";
 
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetDescription } from "../ui/sheet";
 import { Button } from "../ui/button";
 
 export default function MobileNavbar() {
-
-    const { scrolled } = useContext(NavbarScrolledContext);
-
     return (
 
          <Sheet>

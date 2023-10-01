@@ -5,12 +5,12 @@ import Link from "next/link";
 import ModeToggle from "../ModeToggle";
 import NavbarBrandColour from "../../public/NavbarBrandColour.png";
 import NavbarBrandWhite from "../../public/NavbarBrandWhite.png";
-import { useContext } from "react";
-import { NavbarScrolledContext } from "@/contexts/NavbarScrolledContext";
 
-export default function Navbar() {
+interface NavbarProps {
+    scrolled: boolean
+}
 
-    const { scrolled } = useContext(NavbarScrolledContext);
+export default function Navbar( { scrolled }: NavbarProps ) {
 
     return (
         <nav className={scrolled ? "navbar-scrolled" : "navbar"}>

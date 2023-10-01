@@ -3,14 +3,12 @@
 import { useEffect, useState, useContext, useRef } from "react";
 import Navbar from "./Navbar";
 import MobileNavbar from "./MobileNavbar";
-import { NavbarScrolledContext } from "@/contexts/NavbarScrolledContext";
 
 export default function Navigation() {
 
 	const [windowWidth, setWindowWidth] = useState(0);
+	const [scrolled, setScrolled] = useState(false);
 	
-	const { setScrolled } = useContext(NavbarScrolledContext);
-
 	const updateWindowWidth = () => {
 		setWindowWidth(window.innerWidth);
 	  };
@@ -19,7 +17,7 @@ export default function Navigation() {
 		setScrolled((window.scrollY > 50));
 	}
 	
-	// Scroll listener for navbar shrink on any page other than home page
+	// Scroll listener for navbar shrink
 	useEffect(() => {
 		window.addEventListener("scroll", updateScrolled);
 		return () => window.removeEventListener("scroll", updateScrolled);
@@ -35,7 +33,7 @@ export default function Navigation() {
 
 	const setNavbar = () => {
 		if (windowWidth > 768) {
-			return <Navbar />;
+			return <Navbar scrolled={scrolled} />;
 		}
 		else {
 			return <MobileNavbar />;
