@@ -3,7 +3,6 @@ import Features from "@/components/home/Features";
 import Header from "@/components/home/Header";
 import Introduction from "@/components/home/Introduction";
 import CallToAction from "@/components/home/CallToAction";
-import Footer from "@/components/footer/FooterContent";
 
 
 
@@ -17,9 +16,7 @@ export default function Home() {
 				<AirlineStats />
 			</section>
 			<Features />
-			<CallToAction />
-			<Footer />
-		
+			<CallToAction />		
 		</>
 	);
 }
