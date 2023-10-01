@@ -15,8 +15,8 @@ export default function CallToAction() {
             />
             </div>
             <div className="absolute flex flex-col items-center justify-center gap-12">
-                <h4 className="text-6xl font-bold">Heard enough?</h4>
-                <Button className="bg-foreground w-full h-12 text-xl">Join The Crew</Button>
+                <h4 className="text-6xl font-bold text-center">Heard enough?</h4>
+                <Button className="bg-foreground w-3/4 sm:w-full h-12 text-xl">Join The Crew</Button>
             </div>
         </section>
     )
