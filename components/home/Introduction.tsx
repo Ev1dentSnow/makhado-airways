@@ -1,7 +1,7 @@
 
 export default function Introduction() {
     return (
-        <div className="flex flex-col gap-16 max-w-1/2">
+        <div className="flex flex-col gap-16 sm:max-w-1/2">
             <div className="flex flex-col gap-y-6">
                 <h2 className="text-4xl">Who are we?</h2>
                 <p className="text-xl text-muted-foreground">

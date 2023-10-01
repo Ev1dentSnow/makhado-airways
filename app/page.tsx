@@ -11,7 +11,7 @@ export default function Home() {
 	return (
 		<> 
 			<Header />
-			<section className="flex justify-between gap-8 bg-muted pt-20 pl-24">
+			<section className="flex flex-col sm:flex-row justify-between gap-8 bg-muted pt-20 px-6 sm:pl-24">
 				<Introduction />
 				<AirlineStats />
 			</section>
