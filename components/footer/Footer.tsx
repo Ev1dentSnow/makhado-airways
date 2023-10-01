@@ -37,8 +37,8 @@ export default function Footer() {
                     </Link>
                 </div>
             </div>
-            <div className="flex flex-col items-center gap-6">
-                <p className="text-muted-foreground">Copyright Makhado Airways Virtual Airline. All Rights Reserved</p>
+            <div className="flex justify-center gap-32">
+                <p className="text-muted-foreground">&copy; Makhado Airways Virtual Airline. All Rights Reserved</p>
                 <p className="text-muted-foreground">Background images supplied with &#9825; from Skhindi</p>
             </div>
 
