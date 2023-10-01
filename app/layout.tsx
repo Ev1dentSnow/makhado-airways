@@ -22,9 +22,15 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={inter.className}>
 					{/* ACTUAL COMPONENTS START HERE*/}
+					<ThemeProvider
+            			attribute="class"
+            			defaultTheme="dark"
+            			disableTransitionOnChange
+          			>
 						<Navigation />
 						{children}
 						<Footer />
+					</ThemeProvider>
 				{/* ACTUAL COMPONENTS END HERE*/}
 			</body>
 		</html>
