@@ -1,3 +1,4 @@
+// TODO: Refactor navbars for more code sharing between desktop and mobile navbar/reduce repitition
 "use client";
 
 import Image from "next/image";
@@ -6,7 +7,7 @@ import ModeToggle from "../ModeToggle";
 import NavbarBrandColour from "../../public/NavbarBrandColour.png";
 import NavbarBrandWhite from "../../public/NavbarBrandWhite.png";
 
-interface NavbarProps {
+export interface NavbarProps {
     scrolled: boolean
 }
 

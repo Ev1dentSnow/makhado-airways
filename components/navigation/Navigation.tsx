@@ -36,7 +36,7 @@ export default function Navigation() {
 			return <Navbar scrolled={scrolled} />;
 		}
 		else {
-			return <MobileNavbar />;
+			return <MobileNavbar scrolled={scrolled} />;
 		}
 	}
 
