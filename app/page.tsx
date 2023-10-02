@@ -1,4 +1,4 @@
-import AirlineStats from "@/components/AirlineStats";
+import AirlineStats from "@/components/home/AirlineStats";
 import Features from "@/components/home/Features";
 import Header from "@/components/home/Header";
 import Introduction from "@/components/home/Introduction";

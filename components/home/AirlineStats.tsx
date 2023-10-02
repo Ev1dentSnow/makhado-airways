@@ -1,9 +1,26 @@
 
-import { Card, CardHeader, CardContent, CardDescription } from "./ui/card";
-
+import { Card, CardHeader, CardContent } from ".././ui/card";
 import { User, Map, PlaneTakeoff } from "lucide-react"; 
 
-export default function AirlineStats() {
+export const revalidate = 600; // 600 seconds (10 minutes)
+
+export default async function AirlineStats() {
+
+	let data: Array<Object> | null = null;
+	const response = await fetch("http://localhost:3000/api/pilots");
+
+	if (response.ok) {
+		const data = await response.json()
+	}
+	
+	const calculateNumPilots = () => {
+		if (data !== null) {
+			return data.length;
+		}
+		else {
+			return 24;
+		}
+	}
 
 	return (
 		<>
@@ -13,7 +30,7 @@ export default function AirlineStats() {
 						<User size={44} className="white dark:black"/>
 					</CardHeader>
 					<CardContent className="text-center">
-						<h1 className="text-4xl">34</h1>
+						<h1 className="text-4xl">{calculateNumPilots()}</h1>
 						<h5 className="text-xl text-muted-foreground">Pilots</h5>
 					</CardContent>
 				</Card>
