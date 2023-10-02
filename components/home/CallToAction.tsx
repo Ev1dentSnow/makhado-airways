@@ -1,6 +1,7 @@
 import Image from "next/image"
 import CallToActionBackground from "../../public/CallToActionBackground.png";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 
 export default function CallToAction() {
@@ -16,7 +17,9 @@ export default function CallToAction() {
             </div>
             <div className="absolute flex flex-col items-center justify-center gap-12">
                 <h4 className="text-6xl font-bold text-center">Heard enough?</h4>
-                <Button className="bg-foreground w-3/4 sm:w-full h-12 text-xl">Join The Crew</Button>
+                <Link href="getting-started" className="w-3/4 sm:w-full h-12">
+                    <Button className="bg-foreground w-full h-full text-xl">Join The Crew</Button>
+                </Link>
             </div>
         </section>
     )
