@@ -1,4 +1,3 @@
-
 export default function Introduction() {
     return (
         <div className="flex flex-col gap-16 sm:max-w-1/2">

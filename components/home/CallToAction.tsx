@@ -3,7 +3,6 @@ import CallToActionBackground from "../../public/CallToActionBackground.png";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
-
 export default function CallToAction() {
     return (
         <section className="flex flex-col items-center justify-center">

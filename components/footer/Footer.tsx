@@ -41,7 +41,6 @@ export default function Footer() {
                 <p className="text-muted-foreground">&copy; Makhado Airways Virtual Airline. All Rights Reserved</p>
                 <p className="text-muted-foreground">Background images supplied with &#9825; from Skhindi</p>
             </div>
-
         </div>
     )
 }

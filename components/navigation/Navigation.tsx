@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useContext, useRef } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import MobileNavbar from "./MobileNavbar";
 

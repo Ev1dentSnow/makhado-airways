@@ -1,41 +1,59 @@
-
 import { Card, CardHeader, CardContent } from ".././ui/card";
 import { User, Map, PlaneTakeoff } from "lucide-react"; 
 
-async function getData() {
+async function getPilots() {
+	const response = await fetch("https://api.ftw-sim.net/v1/airline/pilots", {
+        next: { revalidate: 600 }, // 600 seconds (10 minutes)
+        headers: {
+            "readaccesskey": process.env.FTW_AIRLINE_API_KEY!
+        },
+    });
 
-	let data = {
-		// simple default known values to easily indicate error in data fetching
-		numPilots: 27,
-		numRoutes: 300,
-		numSectorsFlown: 2000,
-	}
-
-	let pilotData: Array<Object> | null = null;
-	let routeData: Array<Object> | null = null;
-	let sectorData: Array<Object> | null = null;
-
-	const pilotResponse = await fetch("http://localhost:3000/api/pilots");
-	const routeResponse = await fetch("http://localhost:3000/api/routes")
-	const sectorResponse = await fetch("http://localhost:3000/api/sectors");
-
-	if (pilotResponse.ok && routeResponse.ok && sectorResponse.ok) {
-
-		pilotData = await pilotResponse.json();
-		routeData = await routeResponse.json();
-		sectorData = await sectorResponse.json();
-
-		data.numPilots = pilotData!.length;
-		data.numRoutes = routeData!.length;
-		data.numSectorsFlown = sectorData!.length;
-
-	}
-	return data;
+    if (!response.ok) {
+        console.error("Error fetching pilot data from FTW")
+    }
+    const data: Array<Object> = await response.json();
+    return data.length;
 }
+
+async function getRoutes() {
+	const response = await fetch("https://api.ftw-sim.net/v1/airline/routes", {
+        next: { revalidate: 600 }, // 600 seconds (10 minutes)
+        headers: {
+            "readaccesskey": process.env.FTW_AIRLINE_API_KEY!
+        },
+    });
+
+    if (!response.ok) {
+        console.error("Error fetching route data from FTW");
+    }
+
+    const data: Array<Object> = await response.json();
+    return data.length;
+}
+
+async function getSectorsFlown() {
+	const response = await fetch("https://api.ftw-sim.net/v1/airline/logbook", {
+        next: { revalidate: 600 }, // 600 seconds (10 minutes)
+        headers: {
+            "readaccesskey": process.env.FTW_AIRLINE_API_KEY!
+        },
+    });
+
+    if (!response.ok) {
+        console.error("Error fetching sectors flown data from FTW")
+    }
+
+    const data: Array<Object> = await response.json();
+    return data.length;
+}
+
 
 export default async function AirlineStats() {
 
-	const data = await getData();
+	const numPilots = await getPilots();
+	const numRoutes = await getRoutes();
+	const numSectorsFlown = await getSectorsFlown();
 
 	return (
 		<>
@@ -55,7 +73,7 @@ export default async function AirlineStats() {
 							<User size={44} className="white dark:black"/>
 						</CardHeader>
 						<CardContent className="text-center">
-							<h4 className="text-4xl">{data.numPilots}</h4>
+							<h4 className="text-4xl">{numPilots}</h4>
 							<h5 className="text-xl text-muted-foreground">Pilots</h5>
 						</CardContent>
 					</Card>
@@ -65,7 +83,7 @@ export default async function AirlineStats() {
 							<Map size={44} className="white dark:black"/>
 						</CardHeader>
 						<CardContent className="text-center">
-							<h4 className="text-4xl">{data.numRoutes}</h4>
+							<h4 className="text-4xl">{numRoutes}</h4>
 							<h5 className="text-xl text-muted-foreground">Routes</h5>
 						</CardContent>
 					</Card>
@@ -75,7 +93,7 @@ export default async function AirlineStats() {
 							<PlaneTakeoff size={44} className="white dark:black" />
 						</CardHeader>
 						<CardContent className="text-center">
-							<h4 className="text-4xl">{data.numSectorsFlown}</h4>
+							<h4 className="text-4xl">{numSectorsFlown}</h4>
 							<h5 className="text-xl text-muted-foreground">Sectors flown</h5>
 						</CardContent>
 					</Card>
