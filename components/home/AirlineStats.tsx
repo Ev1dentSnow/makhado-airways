@@ -4,23 +4,39 @@ import { User, Map, PlaneTakeoff } from "lucide-react";
 
 export const revalidate = 600; // 600 seconds (10 minutes)
 
+async function getData() {
+
+	let data = {
+		numPilots: 0,
+		numRoutes: 0,
+		numSectorsFlown: 0,
+	}
+
+	let pilotData: Array<Object> | null = null;
+	let routeData: Array<Object> | null = null;
+	let sectorData: Array<Object> | null = null;
+
+	const pilotResponse = await fetch("http://localhost:3000/api/pilots");
+	const routeResponse = await fetch("http://localhost:3000/api/routes")
+	const sectorResponse = await fetch("http://localhost:3000/api/sectors");
+
+	if (pilotResponse.ok && routeResponse.ok && sectorResponse.ok) {
+
+		pilotData = await pilotResponse.json();
+		routeData = await routeResponse.json();
+		sectorData = await sectorResponse.json();
+
+		data.numPilots = pilotData!.length;
+		data.numRoutes = routeData!.length;
+		data.numSectorsFlown = sectorData!.length;
+
+	}
+	return data;
+}
+
 export default async function AirlineStats() {
 
-	let data: Array<Object> | null = null;
-	const response = await fetch("http://localhost:3000/api/pilots");
-
-	if (response.ok) {
-		const data = await response.json()
-	}
-	
-	const calculateNumPilots = () => {
-		if (data !== null) {
-			return data.length;
-		}
-		else {
-			return 24;
-		}
-	}
+	const data = await getData();
 
 	return (
 		<>
@@ -30,7 +46,7 @@ export default async function AirlineStats() {
 						<User size={44} className="white dark:black"/>
 					</CardHeader>
 					<CardContent className="text-center">
-						<h1 className="text-4xl">{calculateNumPilots()}</h1>
+						<h4 className="text-4xl">{data.numPilots}</h4>
 						<h5 className="text-xl text-muted-foreground">Pilots</h5>
 					</CardContent>
 				</Card>
@@ -40,7 +56,7 @@ export default async function AirlineStats() {
 						<Map size={44} className="white dark:black"/>
 					</CardHeader>
 					<CardContent className="text-center">
-						<h1 className="text-4xl">84</h1>
+						<h4 className="text-4xl">{data.numRoutes}</h4>
 						<h5 className="text-xl text-muted-foreground">Routes</h5>
 					</CardContent>
 				</Card>
@@ -50,8 +66,8 @@ export default async function AirlineStats() {
 						<PlaneTakeoff size={44} className="white dark:black" />
 					</CardHeader>
 					<CardContent className="text-center">
-						<h1 className="text-4xl">3012</h1>
-						<h5 className="text-xl text-muted-foreground">Successful sectors flown</h5>
+						<h4 className="text-4xl">{data.numSectorsFlown}</h4>
+						<h5 className="text-xl text-muted-foreground">Sectors flown</h5>
 					</CardContent>
 				</Card>
 
