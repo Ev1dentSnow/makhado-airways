@@ -2,14 +2,13 @@
 import { Card, CardHeader, CardContent } from ".././ui/card";
 import { User, Map, PlaneTakeoff } from "lucide-react"; 
 
-export const revalidate = 600; // 600 seconds (10 minutes)
-
 async function getData() {
 
 	let data = {
-		numPilots: 0,
-		numRoutes: 0,
-		numSectorsFlown: 0,
+		// simple default known values to easily indicate error in data fetching
+		numPilots: 27,
+		numRoutes: 300,
+		numSectorsFlown: 2000,
 	}
 
 	let pilotData: Array<Object> | null = null;
@@ -70,7 +69,6 @@ export default async function AirlineStats() {
 						<h5 className="text-xl text-muted-foreground">Sectors flown</h5>
 					</CardContent>
 				</Card>
-
 			</section>
 		</>
 	);

@@ -1,3 +1,4 @@
+export const revalidate = 600; // 600 seconds (10 minutes)
 
 export async function GET(request: Request) {
     const response = await fetch("https://api.ftw-sim.net/v1/airline/routes", {
