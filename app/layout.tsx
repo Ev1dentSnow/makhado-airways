@@ -6,7 +6,7 @@ import Footer from "@/components/footer/Footer";
 
 export const metadata: Metadata = {
 	title: "Makhado Airways | Virtual Airline",
-	description: "South Africa's Busiest Virtual AIrline",
+	description: "South Africa's Busiest Virtual Airline",
 	themeColor: "hsl(210, 64, 70)"
 };
 
