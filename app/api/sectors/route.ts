@@ -1,7 +1,6 @@
-export const revalidate = 600; // 600 seconds (10 minutes)
-
 export async function GET(request: Request) {
     const response = await fetch("https://api.ftw-sim.net/v1/airline/logbook", {
+        next: { revalidate: 600 }, // 600 seconds (10 minutes)
         headers: {
             "readaccesskey": process.env.FTW_AIRLINE_API_KEY!
         },

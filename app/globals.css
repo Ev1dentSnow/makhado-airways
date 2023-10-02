@@ -10,36 +10,9 @@ body {
   margin: 0;
 }
 
-.parallax-wrapper {
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  perspective: 10px;
-}
-
-.parallax-header {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  transform-style: preserve-3d;
-  z-index: -1;
-}
-
-.parallax-background {
-
-  filter: brightness(0.6) blur(1px);
-
-  position: absolute;
-  height: 100%;
-  width: 100vw;
-  object-fit: cover;
-  z-index: -1;
-  margin: 0;
-  
-  transform: translateZ(-10px) scale(2);
+.live-stats-large-header {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
 }
 
 .navbar {

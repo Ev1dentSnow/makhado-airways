@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <div className="flex flex-col gap-6 items-center px-12 sm:px-0 pt-6 pb-4 bg-background">
+        <div className="flex flex-col gap-6 items-center px-16 pt-6 pb-4 bg-background">
             <h6 className="text-2xl">Our Partners</h6>
             <div className="flex gap-12">
                 <div>
