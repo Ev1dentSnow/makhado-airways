@@ -2,7 +2,7 @@ export default function Introduction() {
     return (
         <div className="flex flex-col gap-16 sm:max-w-1/2">
             <div className="flex flex-col gap-y-6">
-                <h2 className="text-4xl">Who are we?</h2>
+                <h2 className="text-4xl">Makhado | MAW </h2>
                 <p className="text-xl text-muted-foreground">
                     Makhado Airways Virtual Airline is the busiest Virtual Airline in South Africa operating on the VATSIM Network.
                     We comprise of a diverse group of people from all walks of life, united by a common passion
