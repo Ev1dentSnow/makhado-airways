@@ -10,7 +10,8 @@ async function getPilots() {
     });
 
     if (!response.ok) {
-        console.error("Error fetching pilot data from FTW")
+        console.error("Error fetching pilot data from FTW");
+		return 27;
     }
     const data: Array<Object> = await response.json();
     return data.length;
@@ -26,6 +27,7 @@ async function getRoutes() {
 
     if (!response.ok) {
         console.error("Error fetching route data from FTW");
+		return 300;
     }
 
     const data: Array<Object> = await response.json();
@@ -41,7 +43,8 @@ async function getSectorsFlown() {
     });
 
     if (!response.ok) {
-        console.error("Error fetching sectors flown data from FTW")
+        console.error("Error fetching sectors flown data from FTW");
+		return 2000;
     }
 
     const data: Array<Object> = await response.json();
