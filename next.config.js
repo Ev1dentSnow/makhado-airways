@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+
+  images: {
+    minimumCacheTTL: 7200 // 2 hours
+  },
+
     async headers() {
         return [
           {
