@@ -16,7 +16,6 @@ export default function Header() {
 							className="-z-10 object-cover"
 							src={MakhadoBackground.src}
 							alt="Makhado Aiways header background"
-							quality={100}
 							fill
 						/>
 					</div>
