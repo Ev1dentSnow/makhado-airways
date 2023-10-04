@@ -1,5 +1,5 @@
 import Instructions from "@/components/getting-started/Instructions";
-import GettingStartedBackground from "../.././public/GettingStartedBackground.png";
+import GettingStartedBackground from "../../../public/GettingStartedBackground.png";
 
 export default function GettingStarted() {
 	return (

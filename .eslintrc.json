@@ -24,7 +24,7 @@
             "tab"
         ],
         "linebreak-style": [
-            "1",
+            1,
             "unix"
         ],
         "quotes": [
