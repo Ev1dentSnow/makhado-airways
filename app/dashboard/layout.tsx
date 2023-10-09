@@ -1,12 +1,12 @@
-import {SessionProvider} from "next-auth/react";
+import AuthProvider from "@/app/AuthProvider";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<SessionProvider>
+		<AuthProvider>
 			<div>
 				<h1>This is the dashboards navbar</h1>
 				{children}
 			</div>
-		</SessionProvider>
+		</AuthProvider>
 	);
 }

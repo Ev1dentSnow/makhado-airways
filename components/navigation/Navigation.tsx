@@ -11,11 +11,11 @@ export default function Navigation() {
 	
 	const updateWindowWidth = () => {
 		setWindowWidth(window.innerWidth);
-	  };
+	};
 
 	const updateScrolled = () => {
 		setScrolled((window.scrollY > 50));
-	}
+	};
 	
 	// Scroll listener for navbar shrink
 	useEffect(() => {
@@ -28,7 +28,7 @@ export default function Navigation() {
 		updateWindowWidth();
 		window.addEventListener("resize", updateWindowWidth);
 		return () => window.removeEventListener("resize", updateWindowWidth);
-	}, [windowWidth])
+	}, [windowWidth]);
 
 
 	const setNavbar = () => {
@@ -38,7 +38,7 @@ export default function Navigation() {
 		else {
 			return <MobileNavbar scrolled={scrolled} />;
 		}
-	}
+	};
 
 	if (windowWidth === 0) {
 		return null;
