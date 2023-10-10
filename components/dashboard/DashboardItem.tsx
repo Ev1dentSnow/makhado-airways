@@ -4,7 +4,7 @@ import CallToActionBackground from "../../public/CallToActionBackground.png";
 
 export default function DashboardItem() {
 	return (
-		<Card>
+		<Card role="button">
 			<CardHeader className="p-0 h-24 overflow-hidden">
 				<Image
 					src={CallToActionBackground}
