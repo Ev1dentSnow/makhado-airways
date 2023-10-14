@@ -14,8 +14,9 @@ export default function Header() {
 					<div className="h-screen w-full">
 						<Image 
 							className="-z-10 object-cover"
-							src={MakhadoBackground.src}
+							src={MakhadoBackground}
 							alt="Makhado Aiways header background"
+							quality={100}
 							fill
 							priority
 						/>
