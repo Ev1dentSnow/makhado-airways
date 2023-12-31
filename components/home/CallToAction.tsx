@@ -11,6 +11,7 @@ export default function CallToAction() {
                 src={CallToActionBackground}
                 alt="Call to action section background"
                 className="-z-10 object-cover object-top"
+                quality={90}
                 fill
             />
             </div>
