@@ -18,16 +18,16 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-					{/* ACTUAL COMPONENTS START HERE*/}
-					<ThemeProvider
-            			attribute="class"
-            			defaultTheme="dark"
-            			disableTransitionOnChange
-          			>
-						<Navigation />
-						{children}
-						<Footer />
-					</ThemeProvider>
+				{/* ACTUAL COMPONENTS START HERE*/}
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="dark"
+					disableTransitionOnChange
+				>
+					<Navigation />
+					{children}
+					<Footer />
+				</ThemeProvider>
 				{/* ACTUAL COMPONENTS END HERE*/}
 			</body>
 		</html>

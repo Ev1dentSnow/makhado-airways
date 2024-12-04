@@ -24,7 +24,7 @@
             "tab"
         ],
         "linebreak-style": [
-            "1",
+            1,
             "unix"
         ],
         "quotes": [
@@ -36,5 +36,6 @@
             "always"
         ],
         "react/react-in-jsx-scope": "off"
-    }
+    },
+  "ignorePatterns": ["components/**"]
 }

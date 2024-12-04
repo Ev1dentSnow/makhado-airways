@@ -2,53 +2,53 @@ import { Card, CardHeader, CardContent } from ".././ui/card";
 import { User, Map, PlaneTakeoff } from "lucide-react"; 
 
 async function getPilots() {
-	const response = await fetch("https://api.ftw-sim.net/v1/airline/pilots", {
-        next: { revalidate: 600 }, // 600 seconds (10 minutes)
-        headers: {
-            "readaccesskey": process.env.FTW_AIRLINE_API_KEY!
-        },
-    });
+	const response = await fetch("https://api.ftw-sim.de/v1/airline/pilots", {
+		next: { revalidate: 600 }, // 600 seconds (10 minutes)
+		headers: {
+			"readaccesskey": process.env.FTW_AIRLINE_API_KEY!
+		},
+	}); 
 
-    if (!response.ok) {
-        console.error("Error fetching pilot data from FTW");
+	if (!response.ok) {
+		console.error("Error fetching pilot data from FTW");
 		return 27;
-    }
-    const data: Array<Object> = await response.json();
-    return data.length;
+	}
+	const data: Array<Object> = await response.json();
+	return data.length;
 }
 
 async function getRoutes() {
-	const response = await fetch("https://api.ftw-sim.net/v1/airline/routes", {
-        next: { revalidate: 600 }, // 600 seconds (10 minutes)
-        headers: {
-            "readaccesskey": process.env.FTW_AIRLINE_API_KEY!
-        },
-    });
+	const response = await fetch("https://api.ftw-sim.de/v1/airline/routes", {
+		next: { revalidate: 600 }, // 600 seconds (10 minutes)
+		headers: {
+			"readaccesskey": process.env.FTW_AIRLINE_API_KEY!
+		},
+	});
 
-    if (!response.ok) {
-        console.error("Error fetching route data from FTW");
+	if (!response.ok) {
+		console.error("Error fetching route data from FTW");
 		return 300;
-    }
+	}
 
-    const data: Array<Object> = await response.json();
-    return data.length;
+	const data: Array<Object> = await response.json();
+	return data.length;
 }
 
 async function getSectorsFlown() {
-	const response = await fetch("https://api.ftw-sim.net/v1/airline/logbook", {
-        next: { revalidate: 600 }, // 600 seconds (10 minutes)
-        headers: {
-            "readaccesskey": process.env.FTW_AIRLINE_API_KEY!
-        },
-    });
+	const response = await fetch("https://api.ftw-sim.de/v1/airline/logbook", {
+		next: { revalidate: 600 }, // 600 seconds (10 minutes)
+		headers: {
+			"readaccesskey": process.env.FTW_AIRLINE_API_KEY!
+		},
+	});
 
-    if (!response.ok) {
-        console.error("Error fetching sectors flown data from FTW");
+	if (!response.ok) {
+		console.error("Error fetching sectors flown data from FTW");
 		return 2000;
-    }
+	}
 
-    const data: Array<Object> = await response.json();
-    return data.length;
+	const data: Array<Object> = await response.json();
+	return data.length;
 }
 
 
@@ -64,9 +64,9 @@ export default async function AirlineStats() {
 
 				<section className="flex flex-col gap-6 mb-6">
 					<div className="flex flex-col gap-6 items-center">
-							<h4 className="text-4xl font-bold tracking-wider">LIVE STATS</h4>
-							<h5 className="text-xl text-center text-muted-foreground">Delivered via high speed telegraph from our ops center</h5>
-						</div>
+						<h4 className="text-4xl font-bold tracking-wider">LIVE STATS</h4>
+						<h5 className="text-xl text-center text-muted-foreground">Delivered via high speed telegraph from our ops center</h5>
+					</div>
 				</section>
 
 				<section className="w-3/4 2xl:w-full grid grid-rows-3 gap-6 sm:gap-12 bg-muted pb-16">
